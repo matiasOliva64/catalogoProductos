@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("resources/images/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header {
+    background-image: url("resources/images/fondo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #296c8b;
+    color: rgb(155, 146, 146);
+    padding: 1rem;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2{
+    text-align: center;
+    color: black;
+}
+
+p{
+    text-align: center;
+    color: black;
+}
+
+main {
+    padding: 2rem;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /*justify-content: center;*/
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change the link color to #111 (black) on hover */
+  li a:hover {
+    background-color: #554d4d;
+  }
+  
+/* Estilo de las cards */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten en varias filas */
+    justify-content: center; /* Centra las tarjetas en pantallas pequeñas */
+    gap: 1rem; /* Espacio entre las tarjetas */
+}
+
+/* Estilo para las cards individuales */
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 350px; /* Ancho máximo de las tarjetas */
+    min-height: 400px; /* Altura mínima para las tarjetas */
+    display: block; /* Mostrar las tarjetas por defecto */
+}
+
+/* Media query para pantallas más grandes (mayores a 768px) */
+@media (min-width: 768px) {
+    .product-card {
+        width: 45%; /* En pantallas grandes, las tarjetas ocupan el 45% del ancho */
+    }
+}
+
+/* Media query para pantallas pequeñas (menores a 768px) */
+@media (max-width: 767px) {
+    .product-card {
+        width: 100%; /* En pantallas pequeñas, las tarjetas ocupan el 100% del ancho */
+    }
+}
+
+/* Ocultar tarjetas por defecto */
+.product-card.hombre, .product-card.mujer {
+    display: none;
+}
+
+.product-card img {
+    max-width: 100%;
+    height: 300px;
+    max-height: 300px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.price {
+    color: #28a745;
+    font-weight: bold;
+}
+
+.whatsapp {
+    position: fixed; /* Fijo para que se quede en la pantalla */
+    bottom: 20px; /* Distancia desde abajo */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #25d366; /* Color de WhatsApp */
+    border-radius: 50px;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.whatsapp img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
