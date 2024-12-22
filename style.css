@@ -10,11 +10,7 @@ body {
 }
 
 header {
-    background-image: url("resources/images/fondo.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
+    background: inherit;
     background-color: #296c8b;
     color: rgb(155, 146, 146);
     padding: 1rem;
