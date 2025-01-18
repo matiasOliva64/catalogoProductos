@@ -118,15 +118,16 @@ ul {
     font-weight: bold;
 }
 
+/* Botón de WhatsApp */
 .whatsapp {
     position: fixed; /* Fijo para que se quede en la pantalla */
-    bottom: 20px; /* Distancia desde abajo */
+    bottom: 70px; /* Distancia desde abajo (ajustado para no superponerse) */
     right: 20px; /* Distancia desde la derecha */
     background-color: #25d366; /* Color de WhatsApp */
     border-radius: 50px;
     padding: 10px;
-    width: 100px; /* Establece un tamaño fijo para el ancho */
-    height: 20px; /* Establece un tamaño fijo para la altura */
+    width: 110px;
+    height: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -144,14 +145,29 @@ ul {
     margin-right: 8px;
 }
 
-/* Estilo para el primer botón */
-.whatsapp:first-of-type {
+/* Botón de Instagram */
+.instagram {
+    position: fixed;
     bottom: 20px; /* Distancia desde abajo */
     right: 20px; /* Distancia desde la derecha */
+    background-color: #E1306C;
+    border-radius: 50px;
+    padding: 10px;
+    width: 110px;
+    height: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Estilo para el segundo botón */
-.whatsapp:nth-of-type(2) {
-    bottom: 70px; /* Distancia desde abajo */
-    right: 20px; /* Distancia desde la derecha */
+.instagram a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.instagram img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
 }
