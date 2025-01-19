@@ -16,8 +16,6 @@
     <nav>
         <ul>
             <li><a href="#" onclick="filterProducts('all')"><img src="resources/icons/home.png" alt="Home"></a></li>
-            <li><a href="#" onclick="filterProducts('hombre')">Hombre</a></li>
-            <li><a href="#" onclick="filterProducts('mujer')">Mujer</a></li>
             <div class="container-filter">
                 <label for="brandFilter">Marca:</label>
                 <select id="brandFilter" onchange="filterByBrand()">
@@ -31,6 +29,8 @@
                     <option value="Afnan">Afnan</option>
                 </select>
             </div>
+            <li><a href="#" onclick="filterProducts('hombre')">Hombre</a></li>
+            <li><a href="#" onclick="filterProducts('mujer')">Mujer</a></li>
         </ul>
     </nav>
     <main>
