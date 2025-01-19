@@ -18,6 +18,19 @@
             <li><a href="#" onclick="filterProducts('all')"><img src="resources/icons/home.png" alt="Home"></a></li>
             <li><a href="#" onclick="filterProducts('hombre')">Hombre</a></li>
             <li><a href="#" onclick="filterProducts('mujer')">Mujer</a></li>
+            <div class="container-filter">
+                <label for="brandFilter">Marca:</label>
+                <select id="brandFilter" onchange="filterByBrand()">
+                    <option value="all">Todas</option>
+                    <option value="Lattafa">Lattafa</option>
+                    <option value="Rasasi">Rassasi</option>
+                    <option value="Odyssey">Odyssey</option>
+                    <option value="AlHaramain">Al Haramain</option>
+                    <option value="Bharara">Bharara</option>
+                    <option value="Armaf">Armaf</option>
+                    <option value="Afnan">Afnan</option>
+                </select>
+            </div>
         </ul>
     </nav>
     <main>
@@ -35,108 +48,157 @@
         </div>
         <div class="product-grid">
             <!-- Cada producto será un card -->
-            <div class="product-card hombre">
+            <div class="product-card hombre AlHaramain">
                 <img src="resources/images/amber-dulce.jpeg" alt="Producto 1">
                 <img src="resources/images/amber-dulce-description.jpeg" alt="Producto 1">
                 <h2>Al Haramain Amber oud 120ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
+            <div class="product-card hombre AlHaramain">
+                <img src="resources/images/AI-Haramain-Aqua-Dubai.jpg" alt="Producto 2">
+                <img src="resources/images/AI-Haramain-Aqua-Dubai-description.jpg" alt="Producto 2">
+                <h2>Al-Haramain-Aqua-Dubai</h2>
+                <p></p>
+                <p class="price">Consultar precio por WhatsApp</p>
+            </div>
+            <div class="product-card hombre Bharara">
                 <img src="resources/images/baharara-king.jpeg" alt="Producto 3">
                 <img src="resources/images/baharara-king-description.jpeg" alt="Producto 3">
                 <h2>Bharara King 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/club-the-nuit.jpeg" alt="Producto 3">
-                <img src="resources/images/club-the-nuit-description.jpeg" alt="Producto 2">
+            <div class="product-card hombre Armaf">
+                <img src="resources/images/club-the-nuit.jpeg" alt="Producto 4">
+                <img src="resources/images/club-the-nuit-description.jpeg" alt="Producto 4">
                 <h2>Armaf Club de Nuit 105ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/9pm.jpeg" alt="Producto 4">
-                <img src="resources/images/9pm-description.jpeg" alt="Producto 4">
-                <h2>Afnan 9PM 100ml</h2>
+            <div class="product-card hombre Afnan">
+                <img src="resources/images/9pm.jpeg" alt="Producto 5">
+                <img src="resources/images/9pm-description.jpeg" alt="Producto 5">
+                <h2>Afnan 9pm 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/LattafaHonor&Glory.jpeg" alt="Producto 5">
-                <img src="resources/images/LattafaHonor&Glory-description.jpeg" alt="Producto 5">
+            <div class="product-card hombre Afnan">
+                <img src="resources/images/9pm-Rebel.jpg" alt="Producto 6">
+                <img src="resources/images/9pm-Rebel-description.jpg" alt="Producto 6">
+                <h2>Afnan 9pm Rebel</h2>
+                <p></p>
+                <p class="price">Consultar precio por WhatsApp</p>
+            </div>
+            <div class="product-card hombre Afnan">
+                <img src="resources/images/9am-Dive.jpg" alt="Producto 7">
+                <img src="resources/images/9am-Dive-description.jpg" alt="Producto 7">
+                <h2>Afnan 9am Dive</h2>
+                <p></p>
+                <p class="price">Consultar precio por WhatsApp</p>
+            </div>
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/LattafaHonor&Glory.jpeg" alt="Producto 8">
+                <img src="resources/images/LattafaHonor&Glory-description.jpeg" alt="Producto 9">
                 <h2>Lattafa Honor & Glory 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/LattafaOutforGlory.jpeg" alt="Producto 6">
-                <img src="resources/images/LattafaOutforGlory-description.jpeg" alt="Producto 6">
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/LattafaOutforGlory.jpeg" alt="Producto 10">
+                <img src="resources/images/LattafaOutforGlory-description.jpeg" alt="Producto 10">
                 <h2>Lattafa Out for Glory 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/LattafaAmethyst.jpeg" alt="Producto 7">
-                <img src="resources/images/LattafaAmethyst-description.jpeg" alt="Producto 7">
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/LattafaAmethyst.jpeg" alt="Producto 11">
+                <img src="resources/images/LattafaAmethyst-description.jpeg" alt="Producto 11">
                 <h2>Lattafa Amethyst 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/Lattafakhamrah.jpeg" alt="Producto 8">
-                <img src="resources/images/Lattafakhamrah-description.jpeg" alt="Producto 8">
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/Lattafakhamrah.jpeg" alt="Producto 12">
+                <img src="resources/images/Lattafakhamrah-description.jpeg" alt="Producto 12">
                 <h2>Lattafa khamrah 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/LattafakhamrahQahwa.jpeg" alt="Producto 9">
-                <img src="resources/images/LattafakhamrahQahwa-description.jpeg" alt="Producto 9">
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/LattafakhamrahQahwa.jpeg" alt="Producto 13">
+                <img src="resources/images/LattafakhamrahQahwa-description.jpeg" alt="Producto 13">
                 <h2>Lattafa khamrah Qahwa 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/LattafaAsad.jpeg" alt="Producto 10">
-                <img src="resources/images/LattafaAsad-description.jpeg" alt="Producto 10">
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/LattafaAsad.jpeg" alt="Producto 14">
+                <img src="resources/images/LattafaAsad-description.jpeg" alt="Producto 14">
                 <h2>Lattafa Asad 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card mujer">
-                <img src="resources/images/LattafaYaraPinkMujer.jpeg" alt="Producto 11">
-                <img src="resources/images/LattafaYaraPinkMujer-description.jpeg" alt="Producto 11">
+            <div class="product-card mujer Lattafa">
+                <img src="resources/images/LattafaYaraPinkMujer.jpeg" alt="Producto 15">
+                <img src="resources/images/LattafaYaraPinkMujer-description.jpeg" alt="Producto 15">
                 <h2>Lattafa Yara Pink 100ml (Mujer)</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card mujer">
-                <img src="resources/images/LattafaYaraTousMujer.jpeg" alt="Producto 12">
-                <img src="resources/images/LattafaYaraTousMujer-description.jpeg" alt="Producto 12">
+            <div class="product-card mujer Lattafa">
+                <img src="resources/images/LattafaYaraTousMujer.jpeg" alt="Producto 16">
+                <img src="resources/images/LattafaYaraTousMujer-description.jpeg" alt="Producto 16">
                 <h2>Lattafa Yara Tous 100ml (Mujer)</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card mujer">
-                <img src="resources/images/LattafaYaraCandyMujer.jpeg" alt="Producto 13">
-                <img src="resources/images/LattafaYaraCandyMujer-description.jpeg" alt="Producto 13">
+            <div class="product-card mujer Lattafa">
+                <img src="resources/images/LattafaYaraCandyMujer.jpeg" alt="Producto 17">
+                <img src="resources/images/LattafaYaraCandyMujer-description.jpeg" alt="Producto 17">
                 <h2>Lattafa Yara Candy 100ml (Mujer)</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/LattafaFakharSilver.jpeg" alt="Producto 14">
-                <img src="resources/images/LattafaFakharSilver-description.jpeg" alt="Producto 14">
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/LattafaFakharSilver.jpeg" alt="Producto 18">
+                <img src="resources/images/LattafaFakharSilver-description.jpeg" alt="Producto 18">
                 <h2>Lattafa Fakhar Silver 100ml</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>
-            <div class="product-card hombre">
-                <img src="resources/images/RasasiHawas.jpeg" alt="Producto 15">
-                <img src="resources/images/RasasiHawas-description.jpeg" alt="Producto 15">
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/Lattafa-Asad-Bourdbon.jpg" alt="Producto 19">
+                <img src="resources/images/Lattafa-Asad-Bourdbon-description.jpg" alt="Producto 19">
+                <h2>Lattafa Asad Bourdbon</h2>
+                <p></p>
+                <p class="price">Consultar precio por WhatsApp</p>
+            </div>
+            <div class="product-card hombre Rasasi">
+                <img src="resources/images/RasasiHawas.jpeg" alt="Producto 20">
+                <img src="resources/images/RasasiHawas-description.jpeg" alt="Producto 20">
                 <h2>Rasasi Hawas 100ml</h2>
+                <p></p>
+                <p class="price">Consultar precio por WhatsApp</p>
+            </div>
+            <div class="product-card hombre Rasasi">
+                <img src="resources/images/Rasasi-Hawas-Black.jpg" alt="Producto 21">
+                <img src="resources/images/Rasasi-Hawas-Black-description.jpg" alt="Producto 21">
+                <h2>Rasasi Hawas Black</h2>
+                <p></p>
+                <p class="price">Consultar precio por WhatsApp</p>
+            </div>
+            <div class="product-card hombre Odyssey">
+                <img src="resources/images/Odyssey-Mandarin-Sky.jpg" alt="Producto 22">
+                <img src="resources/images/Odyssey-Mandarin-Sky-description.jpg" alt="Producto 22">
+                <h2>Odyssey Mandarin Sky</h2>
+                <p></p>
+                <p class="price">Consultar precio por WhatsApp</p>
+            </div>
+            <div class="product-card hombre Lattafa">
+                <img src="resources/images/Qaed-aI-Fursan.jpg" alt="Producto 23">
+                <img src="resources/images/Qaed-aI-Fursan-description.jpg" alt="Producto 24">
+                <h2>Qaed al Fursan</h2>
                 <p></p>
                 <p class="price">Consultar precio por WhatsApp</p>
             </div>

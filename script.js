@@ -1,35 +1,47 @@
+// Obtener todas las tarjetas de productos
+const products = document.querySelectorAll('.product-card');
+
+let currentCategoryFilter = 'all'; // Filtro actual de categoría
+let currentBrandFilter = 'all'; // Filtro actual de marca
+
+// Función para filtrar por categoría
 function filterProducts(category) {
-    // Obtener todas las tarjetas de productos
-    const products = document.querySelectorAll('.product-card');
-    
-    // Si el filtro es 'all', se muestran todas las tarjetas
+    currentCategoryFilter = category; // Actualiza el filtro de categoría
+
+    // Si se selecciona "all", también restablece el filtro de marca
     if (category === 'all') {
-        products.forEach(product => {
+        currentBrandFilter = 'all';
+        document.getElementById('brandFilter').value = 'all'; // Restablece el select de marcas
+    }
+
+    applyFilters(); // Aplica los filtros
+}
+
+// Función para filtrar por marca
+function filterByBrand() {
+    const brandSelect = document.getElementById('brandFilter');
+    currentBrandFilter = brandSelect.value; // Actualiza el filtro de marca
+    applyFilters(); // Aplica los filtros
+}
+
+// Función para aplicar los filtros combinados
+function applyFilters() {
+    products.forEach(product => {
+        const matchesCategory =
+            currentCategoryFilter === 'all' || product.classList.contains(currentCategoryFilter);
+        const matchesBrand =
+            currentBrandFilter === 'all' || product.classList.contains(currentBrandFilter);
+
+        if (matchesCategory && matchesBrand) {
             product.style.display = 'block';
-        });
-    }
-    // Si el filtro es 'hombre', solo se muestran las tarjetas de 'hombre'
-    else if (category === 'hombre') {
-        products.forEach(product => {
-            if (product.classList.contains('hombre')) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    }
-    // Si el filtro es 'mujer', solo se muestran las tarjetas de 'mujer'
-    else if (category === 'mujer') {
-        products.forEach(product => {
-            if (product.classList.contains('mujer')) {
-                product.style.display = 'block';
-            } else {
-                product.style.display = 'none';
-            }
-        });
-    }
+        } else {
+            product.style.display = 'none';
+        }
+    });
 }
 
 // Mostrar todos los productos por defecto al cargar la página
 document.addEventListener('DOMContentLoaded', () => filterProducts('all'));
+
+
 
