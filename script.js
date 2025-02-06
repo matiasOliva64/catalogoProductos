@@ -62,7 +62,7 @@ function initCarousels() {
                 images[currentIndex].style.opacity = '0';
                 currentIndex = (currentIndex + 1) % images.length;
                 images[currentIndex].style.opacity = '1';
-            }, 9000); // Cambia cada 3 segundos
+            }, 5000); // Cambia cada 3 segundos
         }
     });
 }
