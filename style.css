@@ -91,6 +91,7 @@ ul {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 350px; /* Ancho máximo de las tarjetas */
     min-height: 400px; /* Altura mínima para las tarjetas */
+    max-height: 350px;
     display: block; /* Mostrar las tarjetas por defecto */
 }
 
@@ -178,4 +179,22 @@ ul {
     width: 24px;
     height: 24px;
     margin-right: 8px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
 }

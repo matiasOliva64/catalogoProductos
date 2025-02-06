@@ -45,3 +45,27 @@ document.addEventListener('DOMContentLoaded', () => filterProducts('all'));
 
 
 
+function initCarousels() {
+    const carousels = document.querySelectorAll('.carousel');
+
+    carousels.forEach(carousel => {
+        let currentIndex = 0;
+        const images = carousel.querySelectorAll('img');
+
+        if (images.length > 1) {
+            // Inicializa el primer estado
+            images.forEach((img, index) => {
+                img.style.opacity = index === 0 ? '1' : '0';
+            });
+
+            setInterval(() => {
+                images[currentIndex].style.opacity = '0';
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].style.opacity = '1';
+            }, 9000); // Cambia cada 3 segundos
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', initCarousels);
+
